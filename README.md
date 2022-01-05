@@ -10,4 +10,5 @@ STEP 01
    * Then offer to save the BOOKMAP file (using the name of the Word document)
 
 **Note:** If you save the Word document with the `.txt` extension you can change it later to `.ditamap`.
+
 ----
