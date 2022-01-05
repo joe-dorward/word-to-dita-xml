@@ -3,7 +3,7 @@
 
 ### STEP 01
 
-1. Open a Word document
+1. Open `Word To DITA XML.docx`
 2. Run the `Main()` sub-procedure in `bookmap.bas` - it will:
    * Write a new boiler-plate BOOKMAP file (as a Word document)
    * Add chapter-elements from the headings in the Word document with the 'dita-chapter' style
