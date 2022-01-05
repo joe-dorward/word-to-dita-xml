@@ -6,3 +6,4 @@ STEP 01
 2. Run the 'Main' sub-procedure in bookmap.bas - it will:
    * Create a new boiler-plate BOOKMAP file
    * Add chapter-elements from the headings in the Word document with the 'dita-chapter' style
+   * Then offer to save the BOOKMAP file (using the name of the Word document) as a `.txt` file (which you can change to `.ditamap` later)
