@@ -1,8 +1,8 @@
-# The step-by-step process of converting Word documents to DITA XML using VBA sup-procedures
+# Converting Word documents to DITA XML using VBA sup-procedures
 
-=======
+
 STEP 01
-
+=======
 1. Open a Word document
 2. Run the 'Main' sub-procedure in `bookmap.bas` - it will:
    * Write a new boiler-plate BOOKMAP file (as a Word document)
