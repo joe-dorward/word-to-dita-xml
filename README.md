@@ -8,4 +8,4 @@ STEP 01
    * Add chapter-elements from the headings in the Word document with the 'dita-chapter' style
    * Then offer to save the BOOKMAP file (using the name of the Word document)
 
-**Note: ** If you save the Word document with the `.txt` extension you can change it later to `.ditamap`.
+*Note:* If you save the Word document with the `.txt` extension you can change it later to `.ditamap`.
