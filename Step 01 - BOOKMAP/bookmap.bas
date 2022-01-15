@@ -1,14 +1,36 @@
 ' GLOBAL VARIABLES
 Dim MainBookTitle As String
 Dim BOOKMAP_ID As String
+Dim BookmapContent As String
 ' ---------- ---------- ---------- ---------- ----------
 Sub Main()
 
+  BookmapContent = ""
+  
+  Call Delete_ManualPageBreaks
+  
   Call Get_MainBookTitle
-  Call Get_BOOKMAP_ID  
+  Call Get_BOOKMAP_ID
+  
+  Call Add_BookmapHeader
+  Call Add_BookmapElement
+  Call Add_BooktitleElement
+  Call Add_ChapterElements
+    
   Call Create_Bookmap
   Call Save_Bookmap
   
+End Sub
+Sub Delete_ManualPageBreaks()
+    Selection.Find.ClearFormatting
+    Selection.Find.Replacement.ClearFormatting
+    With Selection.Find
+        .Text = "^m"
+        .Replacement.Text = ""
+        .Forward = True
+        .Wrap = wdFindContinue
+    End With
+    Selection.Find.Execute Replace:=wdReplaceAll
 End Sub
 Sub Get_MainBookTitle()
   ' you may need to customise this sub-procedure further
@@ -42,12 +64,60 @@ Sub Get_BOOKMAP_ID()
   BOOKMAP_ID = Replace(BOOKMAP_ID, ".", "_")
   
 End Sub
+Sub Add_BookmapHeader()
+  BookmapContent = BookmapContent & "<?xml version=""1.0"" encoding=""UTF-8""?>" & vbNewLine
+  BookmapContent = BookmapContent & "<!DOCTYPE bookmap PUBLIC ""-//OASIS//DTD DITA BookMap//EN"""
+  BookmapContent = BookmapContent & " ""bookmap.dtd"""
+  BookmapContent = BookmapContent & ">"
+  BookmapContent = BookmapContent & vbNewLine
+End Sub
+Sub Add_BookmapElement()
+  BookmapContent = BookmapContent & "<bookmap id=""" & BOOKMAP_ID & """"
+  BookmapContent = BookmapContent & " xml:lang=""en_US" & """"
+  BookmapContent = BookmapContent & ">"
+  BookmapContent = BookmapContent & vbNewLine
+End Sub
+Sub Add_BooktitleElement()
+  BookmapContent = BookmapContent & vbNewLine
+  BookmapContent = BookmapContent & "  " & "<booktitle>" & vbNewLine
+  BookmapContent = BookmapContent & "    " & "<mainbooktitle>" & MainBookTitle & "</mainbooktitle>" & vbNewLine
+  BookmapContent = BookmapContent & "  " & "</booktitle>" & vbNewLine
+  BookmapContent = BookmapContent & vbNewLine
+End Sub
+Sub Add_ChapterElements()
+
+  For Each Paragraph In ActiveDocument.Paragraphs
+  
+    ' LOOKS FOR WORD STYLE BY NAME
+    If Paragraph.Range.Style = "Heading 1" Then
+      MapFilename = Left(Paragraph, Len(Paragraph) - 1)
+      MapFilename = LCase(MapFilename)
+      MapFilename = Replace(MapFilename, " ", "_")
+      MapFilename = MapFilename & ".ditamap"
+      
+      ' chapter-element
+      BookmapContent = BookmapContent & "  <chapter href=""m_" & MapFilename & """"
+      BookmapContent = BookmapContent & " format=""ditamap" & """"
+      BookmapContent = BookmapContent & " scope=""local" & """"
+      BookmapContent = BookmapContent & " type=""map" & """"
+      BookmapContent = BookmapContent & " navtitle=""" & Left(Paragraph, Len(Paragraph) - 1) & " Map"""
+      BookmapContent = BookmapContent & "/>" & vbNewLine
+    End If
+    
+  Next Paragraph
+  
+  ' add closing-bookmap element
+  BookmapContent = BookmapContent & "</bookmap>"
+End Sub
 Sub Create_Bookmap()
 
   Dim MapFilename As String
 
-  ' create new document
+  ' add new document
   Documents.Add
+
+  ' add bookmap content
+  ActiveDocument.Content.Text = BookmapContent
   
   ' initialise document
   ActiveDocument.PageSetup.Orientation = wdOrientLandscape
@@ -55,51 +125,12 @@ Sub Create_Bookmap()
   ActiveDocument.PageSetup.RightMargin = 35
   ActiveDocument.PageSetup.BottomMargin = 35
   ActiveDocument.PageSetup.LeftMargin = 35
-  Documents(1).Content.Font.Size = 9
-  Documents(1).Content.Font.name = "Courier New"
   
-  ' add header 'boilerplate'
-  Documents(1).Content.InsertAfter "<?xml version=""1.0"" encoding=""UTF-8""?>" & vbNewLine
-  Documents(1).Content.InsertAfter "<!DOCTYPE bookmap PUBLIC ""-//OASIS//DTD DITA BookMap//EN"""
-  Documents(1).Content.InsertAfter " ""bookmap.dtd"""
-  Documents(1).Content.InsertAfter ">"
-  Documents(1).Content.InsertAfter vbNewLine
+  ActiveDocument.Content.Font.Size = 9
+  ActiveDocument.Content.Font.name = "Courier New"
   
-  ' bookmap-element
-  Documents(1).Content.InsertAfter "<bookmap id=""" & BOOKMAP_ID & """"
-  Documents(1).Content.InsertAfter " xml:lang=""en_US" & """"
-  Documents(1).Content.InsertAfter ">"
-  Documents(1).Content.InsertAfter vbNewLine
-  
-  ' booktitle-element
-  Documents(1).Content.InsertAfter vbNewLine
-  Documents(1).Content.InsertAfter "  " & "<booktitle>" & vbNewLine
-  Documents(1).Content.InsertAfter "    " & "<mainbooktitle>" & MainBookTitle & "</mainbooktitle>" & vbNewLine
-  Documents(1).Content.InsertAfter "  " & "</booktitle>" & vbNewLine
-  Documents(1).Content.InsertAfter vbNewLine
-   
-  ' add chapter-elements
-  For Each Paragraph In Documents(2).Paragraphs
-  
-    If Paragraph.Range.Style = "dita-chapter" Then
-      MapFilename = Left(Paragraph, Len(Paragraph) - 1)
-      MapFilename = LCase(MapFilename)
-      MapFilename = Replace(MapFilename, " ", "_")
-      MapFilename = MapFilename & ".ditamap"
-      
-      ' chapter-element
-      Documents(1).Content.InsertAfter "  <chapter href=""m_" & MapFilename & """"
-      Documents(1).Content.InsertAfter " format=""ditamap" & """"
-      Documents(1).Content.InsertAfter " scope=""local" & """"
-      Documents(1).Content.InsertAfter " type=""map" & """"
-      Documents(1).Content.InsertAfter " navtitle=""" & Left(Paragraph, Len(Paragraph) - 1) & " Map"""
-      Documents(1).Content.InsertAfter "/>" & vbNewLine
-    End If
-  
-  Next Paragraph
-  
-  ' add closing-bookmap element
-  Documents(1).Content.InsertAfter "</bookmap>"
+  ActiveDocument.ActiveWindow.View.Type = wdPrintView
+  ActiveDocument.ActiveWindow.View.Zoom.Percentage = 100
   
 End Sub
 Sub Save_Bookmap()
