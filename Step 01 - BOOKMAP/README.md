@@ -1,5 +1,3 @@
-### STEP 01
-
 1. Open `C Lesson 1.docx`
 2. Run the `Main()` sub-procedure in `bookmap.bas` - it will:
    * Open a new Word document 
