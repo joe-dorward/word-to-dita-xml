@@ -1,6 +1,7 @@
-*This application assumes that each TOPIC is defined by the 'Heading 1' style.*
+*This application assumes that the content of each TOPIC is the content between each heading with the 'Heading 1' style.*
 
-- Steps
+Steps
+=====
 1. Open `C Lesson 1.docx`
 2. Run the `Main()` sub-procedure in `topics.bas` - it will:
    * Add a meta-data table (see `meta_data_table.png`) to the end of the document showing:
