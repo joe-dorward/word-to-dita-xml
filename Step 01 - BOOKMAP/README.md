@@ -1,4 +1,4 @@
-# Step 01
+## Steps
 1. Open `C Lesson 1.docx`
 2. Run the `Main()` sub-procedure in `bookmap.bas` - it will:
    * Process `C Lesson 1.docx`
