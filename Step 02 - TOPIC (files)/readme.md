@@ -13,3 +13,4 @@ Steps
      * Offers to save the new document with the text of the 'Heading 1' as the filename
      * Closes the new document
    * Repeats this process for each 'Heading 1' in `C Lesson 1.docx` (see `exported_topic_files.png`)
+[meta_data_table.png]
