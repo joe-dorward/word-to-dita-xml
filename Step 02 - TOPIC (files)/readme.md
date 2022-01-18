@@ -5,7 +5,7 @@ Steps
 1. Open `C Lesson 1.docx`
 2. Run the `Main()` sub-procedure in `topics.bas` - it will:
 
-!meta_data_table.png
+![image]meta_data_table.png
 
    * Add a meta-data table (see `meta_data_table.png`) to the end of the document showing:
      *  The text of each 'Heading 1'
