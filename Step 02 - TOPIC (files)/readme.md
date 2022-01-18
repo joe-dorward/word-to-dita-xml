@@ -9,7 +9,7 @@ Steps
      *  The paragraph number of each 'Heading 1'
      *  The paragraph number of the paragraph before each 'Heading 1'
 
-!(meta_data_table.png )
+![image](meta_data_table.png )"Meta-Data Table"
 
    * Opens a new document for each 'Heading 1', then:
      * Copies its content into the new document
