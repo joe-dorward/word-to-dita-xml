@@ -8,7 +8,7 @@ Steps
      *  The text of each 'Heading 1'
      *  The paragraph number of each 'Heading 1'
      *  The paragraph number of the paragraph before each 'Heading 1'
-   ![image](meta_data_table.png "Meta-Data Table")
+![image "Meta-Data Table"](meta_data_table.png )
    * Opens a new document for each 'Heading 1', then:
      * Copies its content into the new document
      * Offers to save the new document with the text of the 'Heading 1' as the filename
