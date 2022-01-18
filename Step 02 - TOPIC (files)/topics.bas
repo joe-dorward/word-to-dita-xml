@@ -1,7 +1,5 @@
 ' GLOBAL VARIABLES
 Dim Path As String
-Dim MainBookTitle As String
-Dim BOOKMAP_ID As String
 Dim BookmapContent As String
 ' ---------- ---------- ---------- ---------- ----------
 Sub Reload()
