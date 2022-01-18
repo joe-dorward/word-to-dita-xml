@@ -5,7 +5,7 @@ Steps
 1. Open `C Lesson 1.docx`
 2. Run the `Main()` sub-procedure in `topics.bas` - it will:
 
-[https://github.com/joe-dorward/word-to-dita-xml/blob/main/Step%2002%20-%20TOPIC%20(files)/meta_data_table.png]
+(https://github.com/joe-dorward/word-to-dita-xml/blob/main/Step%2002%20-%20TOPIC%20(files)/meta_data_table.png)
 
    * Add a meta-data table (see `meta_data_table.png`) to the end of the document showing:
      *  The text of each 'Heading 1'
