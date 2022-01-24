@@ -13,6 +13,6 @@ End Sub
 
 It will report only one list:
 
-<img src="overview.png" width="50%" height="50%">
+<img src="count.png" width="50%" height="50%">
 
 **Conclusion** It's unlikely that we can rely on simple VBA sub-procedures to automatically convert legacy Word documents into valid DITA XML files, and that some kind of semi-automatic, interventionist process will likely be neccessary.
