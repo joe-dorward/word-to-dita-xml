@@ -4,6 +4,9 @@ The *main* problem with converting legacy Word documents into any other format, 
 ![image](overview.png)
 
 However, if you run:
-[code] Sub Count_Lists()
+
+```
+Sub Count_Lists()
   MsgBox ActiveDocument.Lists.Count
 End Sub
+```
