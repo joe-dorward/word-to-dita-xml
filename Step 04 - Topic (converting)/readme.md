@@ -3,7 +3,7 @@ The *main* problem with converting legacy Word documents into any other format, 
 
 <img src="overview.png" width="30%" height="30%">
 
-![image](overview.png){:height=20% width=20%}
+![image](overview.png){:height="20%" width="20%"}
 
 However, if you run:
 
