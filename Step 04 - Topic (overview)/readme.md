@@ -22,3 +22,6 @@ It will report only one list:
 * Some kind of semi-automatic, ad-hoc, interventionist, process will likely be neccessary - for example - selecting a few paragraphs and running a specific sub-procedure over them
 
 ### Solution
+
+* Run the ``main`` sub-procedure in ``topic_overview.bas``
+* 
