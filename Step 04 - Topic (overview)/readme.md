@@ -24,11 +24,8 @@ It will report only one list:
 ### Solution
 
 * Run the ``main()`` sub-procedure in ``topic_overview.bas``, then:
-
-  1.
-    * Select the first sub-list
-    * Run the ``Make_Selected_SubList()`` sub-procedure
-    
+  * Select the first sub-list
+  * Run the ``Make_Selected_SubList()`` sub-procedure    
   * Select the second sub-list
   * Run the ``Make_Selected_SubList()`` sub-procedure
   * Select the first list
