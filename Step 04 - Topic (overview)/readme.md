@@ -38,4 +38,4 @@ It will report only one list:
   * Select the "Important Notes:" paragraph
   * Run the ``Make_Selected_Paragraph()`` sub-procedure
 
-** That should produce an almost-correct DITA XML topic file - that needs a light-edit to make it correct.**  
+**That should produce an almost-correct DITA XML topic file - that needs a light-edit to make it correct.**  
