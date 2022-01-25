@@ -15,6 +15,10 @@ It will report only one list:
 
 ![image](count.png)
 
-**Conclusion:** It's unlikely that we can rely on simple VBA sub-procedures to automatically convert legacy Word documents into valid DITA XML files.
+**Conclusions:** 
 
-**Solution:** Some kind of semi-automatic, interventionist, process will likely be neccessary - for example - selecting a few paragraphs and running a specific sub-procedure over them.
+* It's unlikely that we can rely on simple VBA sub-procedures to automatically convert legacy Word documents into valid DITA XML files
+
+* Some kind of semi-automatic, interventionist, process will likely be neccessary - for example - selecting a few paragraphs and running a specific sub-procedure over them
+
+### Solution
