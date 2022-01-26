@@ -23,12 +23,12 @@ It will report only one list:
 
 ### Solution
 
-* Run the ``main()`` sub-procedure in ``topic_overview.bas``, then:
-  * Select the first sub-list (and) run ``Make_Selected_SubList()`` 
-  * Select the second sub-list (and) run ``Make_Selected_SubList()``
-  * Select the first list (and) run ``Make_Selected_UnorderedList()``
-  * Select the second list (and) run ``Make_Selected_UnorderedList()``
-  * Select the paragraphs between the ``<body>`` and ``</body>`` elements (and) run ``Make_Selected_Section()``
-  * Select the "Important Notes:" paragraph (and) run ``Make_Selected_Paragraph()``
+* Run the ``main()`` sub-procedure in ``topic_overview.bas``
+* Select the first sub-list (and) run ``Make_Selected_SubList()`` 
+* Select the second sub-list (and) run ``Make_Selected_SubList()``
+* Select the first list (and) run ``Make_Selected_UnorderedList()``
+* Select the second list (and) run ``Make_Selected_UnorderedList()``
+* Select the paragraphs between the ``<body>`` and ``</body>`` elements (and) run ``Make_Selected_Section()``
+* Select the "Important Notes:" paragraph (and) run ``Make_Selected_Paragraph()``
 
 *That should produce an almost-correct DITA XML topic file, that needs little-more than a light-edit to make it correct.*  
