@@ -4,7 +4,7 @@ Outline topics as created by &lt;oXygen/&gt; XML Author.
 
 <table>
   <tr>
-    <td>
+    <td><img src="t_outline_topic_topic.png"/>
 ![image](t_outline_topic_topic.png)
     </td><td>![image](test_get_topic_header(topic).png)</td>
   </tr>
