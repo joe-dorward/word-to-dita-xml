@@ -1,4 +1,4 @@
-Outline topics as created by &lt;oXygen/&gt; XML Author, and VBA function ``Get_Topic_Header()``.
+The VBA function ``Get_Topic_Header()`` returns a string containing the customised header-text of a DITA XML **TOPIC** topic. It is easily extendable to return the customised header-text of an DITA XML topic-type.
 
 **Topic (Topic)**
 <table border="0">
