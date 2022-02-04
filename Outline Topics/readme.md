@@ -1,5 +1,9 @@
+Outline topics as created by &lt;oXygen/&gt; XML Author.
+
 **Topic (Topic)**
 
-This is the outline topic (topic) as created by &lt;oXygen/&gt; XML Author
-
 ![image](t_outline_topic_topic.png)
+
+**Task (Topic)**
+
+![image](t_outline_task_topic.png)
