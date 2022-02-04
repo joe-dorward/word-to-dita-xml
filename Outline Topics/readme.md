@@ -1,11 +1,10 @@
 Outline topics as created by &lt;oXygen/&gt; XML Author.
 
 **Topic (Topic)**
-
 <table border="0">
   <tr>
     <td>&lt;oXygen/&gt; XML Author</td>
-    <td>`Get_Topic_Header("Topic", "Outline Topic (Topic)")`</td>
+    <td><tt>Get_Topic_Header("Topic", "Outline Topic (Topic)")</tt></td>
   </tr>
   <tr>
     <td><img src="t_outline_topic_topic.png"/></td>
@@ -14,5 +13,17 @@ Outline topics as created by &lt;oXygen/&gt; XML Author.
 </table>
 
 **Task (Topic)**
+<table border="0">
+  <tr>
+    <td>&lt;oXygen/&gt; XML Author</td>
+    <td><tt>Get_Topic_Header("Task", "Outline Task (Topic)")</tt></td>
+  </tr>
+  <tr>
+    <td><img src="t_outline_task_topic.png"/></td>
+    <td><img src="test_get_topic_header(task).png"/></td>
+  </tr>
+</table>
 
-![image](t_outline_task_topic.png)
+
+
+
