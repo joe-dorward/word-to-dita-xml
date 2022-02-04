@@ -1,4 +1,4 @@
-Outline topics as created by &lt;oXygen/&gt; XML Author.
+Outline topics as created by &lt;oXygen/&gt; XML Author, and VBA function ``Get_Topic_Header()``.
 
 **Topic (Topic)**
 <table border="0">
