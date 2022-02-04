@@ -5,7 +5,7 @@ Outline topics as created by &lt;oXygen/&gt; XML Author.
 <table border="0">
   <tr>
     <td>&lt;oXygen/&gt; XML Author</td>
-    <td>``Get_Topic_Header("Topic", "Outline Topic (Topic)")``</td>
+    <td>`Get_Topic_Header("Topic", "Outline Topic (Topic)")`</td>
   </tr>
   <tr>
     <td><img src="t_outline_topic_topic.png"/></td>
