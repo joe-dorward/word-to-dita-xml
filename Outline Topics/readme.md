@@ -7,6 +7,6 @@ The VBA function ``Get_Topic_Header()`` returns a string containing the customis
   </tr>
   <tr>
     <td><img src="t_outline_topic_topic.png"/></td>
-    <td><img src="test_get_topic_header(topic).png"/></td>
+    <td><img src="test_get_topic_header_(topic).png"/></td>
   </tr>
 </table>
