@@ -1,4 +1,4 @@
-The VBA function ``Get_Topic_Header()`` returns a string containing the customised header-text of a DITA XML **TOPIC** topic. It is easily extendable to return the customised header-text of an DITA XML topic-type.
+The VBA function ``Get_Topic_Header()`` returns a string containing the customised header-text of a DITA XML **TOPIC** topic-type. It is easily extendable to return the customised header-text of any DITA XML topic-type.
 
 <table border="0">
   <tr>
