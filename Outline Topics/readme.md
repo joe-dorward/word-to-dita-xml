@@ -4,7 +4,12 @@ Outline topics as created by &lt;oXygen/&gt; XML Author.
 
 <table border="0">
   <tr>
-    <td><img src="t_outline_topic_topic.png"/></td><td><img src="test_get_topic_header(topic).png"/></td>
+    <td>&lt;oXygen/&gt; XML Author</td>
+    <td>``Get_Topic_Header("Topic", "Outline Topic (Topic)")``</td>
+  </tr>
+  <tr>
+    <td><img src="t_outline_topic_topic.png"/></td>
+    <td><img src="test_get_topic_header(topic).png"/></td>
   </tr>
 </table>
 
